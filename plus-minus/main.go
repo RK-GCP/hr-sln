@@ -3,18 +3,18 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"io"
 	"os"
 	"strconv"
 	"strings"
 )
 
 func main() {
+	fmt.Println("enter series of numbers seperate by space")
 	reader := bufio.NewReader(os.Stdin)
 
 	input, _, err := reader.ReadLine()
 
-	if err == io.EOF {
+	if err != nil {
 		fmt.Println("no input read")
 	}
 
