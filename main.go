@@ -32,7 +32,7 @@ func twonum() {
 }
 
 func longSubStr() {
-	teststr := "bbbbbbb"
+	teststr := "abcabcbb"
 	ls := longestsubstring.GetLonestSubString(teststr)
 	fmt.Printf("%v\n", fmt.Sprintf("longest non-repeating substr for %[1]v is %[2]v", teststr, ls))
 }

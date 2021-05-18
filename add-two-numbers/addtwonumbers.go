@@ -47,6 +47,10 @@ func Newll(l1 *ListNode, l2 *ListNode) *ListNode {
 
 		carry = sum / 10
 
+		if carry > 0 {
+			fmt.Println(carry)
+		}
+
 		nodetoreturn.Next = &ListNode{Val: sum % 10}
 		nodetoreturn = nodetoreturn.Next
 
