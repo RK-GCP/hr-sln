@@ -1,25 +1,15 @@
-package main
+package addtwonumbers
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-func main() {
-	ln1 := makeln([]int{1, 2, 7})
-
-	ln2 := makeln([]int{5, 2, 2})
-
-	crln := newll(ln1, ln2)
-
-	str := fmt.Sprintf("%v", crln)
-
-	fmt.Printf("%v", str)
-}
-
-func makeln(nums []int) *ListNode {
+func Makeln(nums []int) *ListNode {
 	if len(nums) == 0 {
 		return nil
 	}
@@ -38,7 +28,7 @@ func makeln(nums []int) *ListNode {
 	return result
 }
 
-func newll(l1 *ListNode, l2 *ListNode) *ListNode {
+func Newll(l1 *ListNode, l2 *ListNode) *ListNode {
 	newnode := &ListNode{}
 	nodetoreturn := newnode
 	carry := 0
@@ -64,4 +54,15 @@ func newll(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	return newnode
 
+}
+
+func PrintLL(l *ListNode) string {
+	result := ""
+	for l != nil {
+		if l != nil {
+			result += fmt.Sprintf("%v\n", l.Val)
+			l = l.Next
+		}
+	}
+	return result
 }
