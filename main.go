@@ -5,6 +5,7 @@ import (
 
 	addtwonumbers "github.com/RK-GCP/hr-sln/add-two-numbers"
 	longestsubstring "github.com/RK-GCP/hr-sln/longest-substring"
+	"github.com/RK-GCP/hr-sln/mediansortedarray"
 	"github.com/RK-GCP/hr-sln/twonumbers"
 )
 
@@ -12,6 +13,7 @@ func main() {
 	twonum()
 	longSubStr()
 	twonumbersAdd()
+	sortedMedianArray()
 }
 
 func twonum() {
@@ -47,4 +49,13 @@ func twonumbersAdd() {
 	str := addtwonumbers.PrintLL(crln)
 
 	fmt.Printf("%v", str)
+}
+
+func sortedMedianArray() {
+	nums2 := []int{1, 2, 3}
+	nums1 := []int{4, 5}
+
+	median := mediansortedarray.FindMedianSortedArrays(nums1, nums2)
+
+	fmt.Printf("median: %v", median)
 }

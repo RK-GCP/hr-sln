@@ -14,9 +14,7 @@ func Makeln(nums []int) *ListNode {
 		return nil
 	}
 
-	result := &ListNode{
-		Val: nums[0],
-	}
+	result := &ListNode{}
 
 	templn := result
 
@@ -50,6 +48,8 @@ func Newll(l1 *ListNode, l2 *ListNode) *ListNode {
 		if carry > 0 {
 			fmt.Println(carry)
 		}
+
+		fmt.Println(sum)
 
 		nodetoreturn.Next = &ListNode{Val: sum % 10}
 		nodetoreturn = nodetoreturn.Next
