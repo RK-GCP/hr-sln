@@ -6,7 +6,7 @@ import (
 
 // var sstr map[string]int
 
-func GetLonestSubString(s string) int {
+func GetLongestSubString(s string) int {
 
 	if s == "" || len(strings.TrimSpace(s)) == 0 {
 		return 0

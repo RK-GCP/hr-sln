@@ -16,6 +16,7 @@ func main() {
 	twonumbersAdd()
 	sortedMedianArray()
 	testReverse()
+	palindrome()
 }
 
 func twonum() {
@@ -37,7 +38,7 @@ func twonum() {
 
 func longSubStr() {
 	teststr := "abcabcbb"
-	ls := longestsubstring.GetLonestSubString(teststr)
+	ls := longestsubstring.GetLongestSubString(teststr)
 	fmt.Printf("%v\n", fmt.Sprintf("longest non-repeating substr for %[1]v is %[2]v", teststr, ls))
 }
 
@@ -65,4 +66,9 @@ func sortedMedianArray() {
 func testReverse() {
 	i := morealgo.Reverse(-123)
 	fmt.Println(i)
+}
+
+func palindrome() {
+	fmt.Println(morealgo.LongestPalindrome("babad"))
+	fmt.Println(morealgo.Reverse("abba))
 }
