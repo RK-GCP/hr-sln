@@ -16,7 +16,8 @@ func main() {
 	twonumbersAdd()
 	sortedMedianArray()
 	testReverse()
-	palindrome()
+	//palindrome()
+	getGroupAnagrams()
 }
 
 func twonum() {
@@ -43,9 +44,9 @@ func longSubStr() {
 }
 
 func twonumbersAdd() {
-	ln1 := addtwonumbers.Makeln([]int{1, 2, 7})
+	ln1 := addtwonumbers.Makeln([]int{1, 9, 7})
 
-	ln2 := addtwonumbers.Makeln([]int{5, 2, 2})
+	ln2 := addtwonumbers.Makeln([]int{5, 2, 6})
 
 	crln := addtwonumbers.Newll(ln1, ln2)
 
@@ -70,5 +71,14 @@ func testReverse() {
 
 func palindrome() {
 	fmt.Println(morealgo.LongestPalindrome("babad"))
-	fmt.Println(morealgo.Reverse("abba))
+	//fmt.Println(morealgo.Reverse("abba"))
+}
+
+func getGroupAnagrams() {
+	test := []string{"tea", "eat", "ate", "pin", "nip"}
+
+	validation := morealgo.GroupAnagrams(test)
+
+	fmt.Println(validation)
+
 }
